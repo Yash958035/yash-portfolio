@@ -387,29 +387,188 @@ nav a{
    EDUCATION
 ================================= */
 
-.edu{
-    max-width:700px;
-    margin:auto;
-    background:rgba(255,255,255,.05);
-    padding:35px;
-    border-radius:20px;
-    border-left:5px solid #2563eb;
-    transition:.4s;
+/*==========================
+EDUCATION
+==========================*/
+
+.education-container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:30px;
+
+margin-top:60px;
+
 }
 
-.edu:hover{
-    transform:translateY(-8px);
-    box-shadow:0 15px 30px rgba(37,99,235,.3);
+.edu-card{
+
+background:rgba(255,255,255,.05);
+
+padding:35px;
+
+border-radius:25px;
+
+border:1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+transition:.4s;
+
+position:relative;
+
+overflow:hidden;
+
 }
 
-.edu h3{
-    color:#3b82f6;
-    margin-bottom:10px;
+.edu-card::before{
+
+content:"";
+
+position:absolute;
+
+left:-100%;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+background:linear-gradient(90deg,transparent,rgba(255,255,255,.08),transparent);
+
+transition:.8s;
+
 }
 
-.edu p{
-    color:#cbd5e1;
-    margin:8px 0;
+.edu-card:hover::before{
+
+left:100%;
+
+}
+
+.edu-card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 0 35px rgba(37,99,235,.4);
+
+border-color:#2563eb;
+
+}
+
+.edu-icon{
+
+width:70px;
+
+height:70px;
+
+border-radius:50%;
+
+background:#2563eb;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:30px;
+
+margin-bottom:20px;
+
+box-shadow:0 0 25px #2563eb;
+
+}
+
+.edu-card h3{
+
+font-size:26px;
+
+margin-bottom:12px;
+
+color:#fff;
+
+}
+
+.edu-card p{
+
+color:#cbd5e1;
+
+margin:8px 0;
+
+}
+
+.edu-card span{
+
+display:inline-block;
+
+margin-top:10px;
+
+color:#3b82f6;
+
+font-weight:600;
+
+}
+
+.cgpa-box{
+
+margin-top:25px;
+
+}
+
+.cgpa-box h4{
+
+color:#94a3b8;
+
+font-size:17px;
+
+}
+
+.cgpa-number{
+
+font-size:55px;
+
+font-weight:bold;
+
+color:#3b82f6;
+
+text-shadow:0 0 20px rgba(37,99,235,.6);
+
+animation:pulse 2s infinite;
+
+}
+
+.cgpa-number span{
+
+font-size:22px;
+
+color:#fff;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
 }
 
 /* ===============================
